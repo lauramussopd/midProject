@@ -1,5 +1,6 @@
 * {
-    background-color:beige;
+    background-color: var(--neutral-light);
+    color: var(--neutral-medium);
     font-family: Roboto, sans-serif;
 }
 
@@ -9,12 +10,17 @@
     --primary-hover: #A2D6F9;
     --primary-tappen: #D1EDFF;
     --neutral-dark: #292E47;
+    --neutral-medium: #6B708D;
+    --neutral-light: #F4F6FC;
+    --neutral-light-blue: #ECF7FF;
+    --secondary: #FFC600;
 
 }
 
 h1 {
     font-size: 60px;
     font-weight: bold;
+    color: var(--neutral-dark);
 }
 
 h2 {
@@ -34,24 +40,20 @@ h4 {
 }
 
 .navbar {
-    display: flex; 
-    align-items: center; 
+    padding: 10px; /* Padding around the navbar */
   }
-.navbar ul {
-    list-style-type: none;
+  
+  .navbar ul {
+    list-style-type: none; /* Remove default list styles */
     margin: 0;
     padding: 0;
   }
-    
+  
   .navbar ul li {
-    display: inline-block;
-    margin-right: 20px; /* Adjust as needed */
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Spacing between list items */
   }
   
-  .navbar ul li:last-child {
-    margin-right: 0; /* Remove margin from last item */
-  }
-  
-  .navbar button {
-    margin-left: auto; /* Adjust as needed */
+  .navbar ul li a {
+    text-decoration: none; /* Remove underline from links */
   }
