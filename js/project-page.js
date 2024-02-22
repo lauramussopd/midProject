@@ -1,5 +1,4 @@
-function genCard() {
-    //genera un elemento de tipo div que tenga la class hero_text
+function genCard(nameProject, descriptionProject, dateProject, urlProject, contentProject) {
     const genDiv = document.createElement("div");
     genDiv.classList.add("hero_text");
     genDiv.innerHTML = `<h1>${nameProject}</h1>
@@ -11,10 +10,24 @@ function genCard() {
       <img src="${urlProject}" alt="">
       <img src="${urlProject}" alt="">
     </section>
-    <p>Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt quix duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi. <br><br>
-
-      Aliqua id fugiat nostrud irure ex duis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.Aliqua id fugiat nostrud irure ex duis ea quis id quis ad e dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisis ea quis id quis ad et. Sunt qui esse pariatur duis deserunt mollit dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nisi.Aliqua id fugiat nostrud irure ex duis ea quis id quis ad e dolore cillum minim tempor enim. Elit aute irure tempor cupidatat incididunt sint deserunt ut voluptate aute id deserunt nis cillum minim tempor enim. </p>`
+    <p>${contentProject}</p>`;
+    console.log(genDiv);
+    return genDiv;
 }
+
+async function appendGenCard(){
+    try {
+        const {completed_on, content, description, image, name, uuid} = await asyncCall();
+        const cardContentElement = document.querySelector(".card_content");
+        cardContentElement.appendChild(genCard(name, description, completed_on, image, content));    
+   
+    } catch (error) {
+        console.log(error);
+    }
+
+}
+
+appendGenCard();
 
 const projectNum = projectLoad();
 console.log(projectNum);
@@ -25,10 +38,9 @@ async function asyncCall() {
         const data = await res.json();
         console.log(data);
         const resFilter = data.filter((element) => element.uuid == projectNum);
-        console.log(resFilter[0].name);
-        const resName = resFilter[0].name;
+        return resFilter[0];
     } catch (error) {
-
+        console.log(error);
     }
 }
 
