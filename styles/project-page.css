@@ -1,0 +1,34 @@
+
+.hero-text {
+    width: 100%;
+}
+
+.hero_content {
+    display: block;
+}
+
+.hero-p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.principal-image {
+    width: 100%;
+    height: 444px;
+    margin-bottom: 5rem;
+}
+
+.principal-image img {
+    width: 100%;
+    height: 444px;
+    object-fit: cover;
+}
+
+.principal-image img:first-of-type {
+    filter: blur(10px);
+}
+
+.principal-image img:last-of-type {
+    position: relative;
+    top: -444px;
+}

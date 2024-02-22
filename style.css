@@ -50,7 +50,16 @@ h4 {
   display: flex;
   flex-direction: column;
   height: 10rem;
+  position: fixed;
+  top: 0;
+  right: 100px;
+  left: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+  background-color: pink;
+  /* background-color: var(--neutral-light); */
 }
+
 
 
 .navbar {
@@ -89,12 +98,14 @@ h4 {
   color: #fff; /* Example text color */
   border: none;
   cursor: pointer;
+  text-decoration: none;
 }
 
 /*Hero Section*/
 
 .hero{
   margin-bottom: 10rem;
+  margin-top: 180px;
 }
 
 .hero_content{
@@ -157,7 +168,8 @@ h4 {
 /*Project Section*/
 
 .project-section {
-  padding: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
   margin-bottom: 10rem;
 }
 
@@ -177,7 +189,7 @@ h4 {
   max-width: 340px;
   height: 100%;
   background-color: #fff;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adjust the shadow as needed */
+  box-shadow: 0 10px 20px rgba(2, 35, 78, 0.2); 
 }
 
 .project-image {
@@ -205,6 +217,20 @@ h4 {
   padding-left: 2rem;
 }
 
+.text-project a{
+  text-decoration: none;
+}
+
+.text-project h4{
+  margin-bottom: 0px;
+  color: var(--neutral-dark);
+}
+
+.text-project p{
+  margin-bottom: 3.5rem;
+}
+
+
 /*Testimonial Section*/
 
 
@@ -217,23 +243,24 @@ h4 {
   background-position: center center;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center; /* Horizontally center */
+  justify-content: center; 
   align-items: center;
   margin-bottom: 10rem;
 }
 
-.reviews h2 {
+.reviews h3 {
   color: var(--neutral-light);
 }
 .reviews h4 {
   color: var(--secondary);
 }
 
+
 .emoticons {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
   height: 100%;
+  padding: -20px;
 }
 
 .emoticons-sx,
@@ -242,29 +269,60 @@ h4 {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  padding: 2rem;
 }
 
 .emoticons-sx img,
 .emoticons-dx img {
   max-width: 10rem; 
-  height: auto; 
+  width: 9rem;
+
 }
 
 .reviews {
-  text-align: center;
+ text-align: center;
   max-width: 50%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: column;
-  text-wrap: balance;
+  text-wrap: balance; 
 }
 
 .reviews img {
-  max-width: 100px;
-  border-radius: 50%;
-  margin-top: 10px;
+  height: 80px;
+  clip-path: circle(44% at 50% 50%);
 }
+
+.testimonial{
+  display: flex;
+  flex-direction: row;
+  
+}
+.testimonial div{
+display: inline-block;
+}
+
+
+
+.testimonial-profile-information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+#testimonial-profile-full-name {
+  color: var(--primary-hover);
+}
+
+#testimonial-profile-company {
+  color: var(--neutral-light);
+  font-size: 0.812rem;
+  font-weight: 400;
+  text-decoration: none;
+}
+
 
 /* Service Station */
 
@@ -278,11 +336,14 @@ h4 {
 .service {
   flex: 1 1 300px; 
   margin: 20px;
-  padding: 20px;
+  padding: 30px;
   width: 340px;
   height: 380px;
   box-shadow: 0 10px 20px rgba(2, 35, 78, 0.2); 
   background-color:#fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .service a{
@@ -297,13 +358,11 @@ h4 {
   color: var(--neutral-dark);
 }
 
-.service img {
+.icon-container img{
   padding: 1rem;
   background-color: var(--neutral-light-blue);
   border-radius: 50%;
 }
-
-/* Services Section */
 
 .CTA-section{
   width: 100%;
@@ -317,12 +376,25 @@ h4 {
 }
 .CTA-section h3{
   color: var(--neutral-dark);
+  margin-bottom: 1px;
 }
 
-#email {
-  padding: 10px; 
+.CTA-section p{
+  margin-top: 1.25rem;
+}
+
+
+#email { 
   font-size: 15px;
   border: none;
+  width: 393px;
+  height: 80px;
+  margin-right: 1rem;
+  background: url(assets/newsletter/icon/mail.svg) no-repeat scroll center left 1.875rem;
+  background-color: #FFFFFF;
+  padding-left: 4.375rem;
+  border: 0;
+  margin-top: 3.125rem;
 }
 
 .button-contact {
@@ -331,41 +403,60 @@ h4 {
   color: #fff; 
   border: none;
   cursor: pointer;
+  font-weight: 500;
 }
 
+.CTA-section button{
+  width: 200px;
+  height: 80px;
+  font-size: 1.062rem;
+}
 
 /* footer */
 
 footer {
+  padding: 0 6.875rem;
+  margin-top: 12.5rem;
+  height: 15.125rem;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 #company-info {
-  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
 }
 
-#company-info img{
-  width: 99px;
-  height: 30px;
+#company-info img {
+  height: 1.875rem;
+}
+
+#company-info p {
+  width: 16.25rem;
+  margin-top: 1.875rem;
 }
 
 #footer-links {
-  display: flex;
-  flex: 1;
-  justify-content: flex-end;
+  /* width: 27rem; */
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6.625rem;
+}
+
+#footer-links a {
+  font-size: 1.062rem;
+  font-weight: 400;
+  color: var(--neutral-medium);
+  text-decoration: none;
 }
 
 .footer-link-column {
   display: flex;
   flex-direction: column;
-}
-
-.footer-link-column a {
-  margin-bottom: 60px;
-  text-decoration: none;
-  color: var(--neutral-medium);
-}
-
-.footer-link-column:not(:last-child) {
-  margin-right: 106px;
+  gap: 3.75rem;
+  justify-content: space-between;
 }
