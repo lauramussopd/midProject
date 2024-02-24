@@ -116,6 +116,10 @@ h4 {
 
 /*Hero Section*/
 
+/* SMALL SCREEN */
+
+
+
 .hero {
   margin-bottom: 10rem;
   margin-top: 180px;
@@ -177,7 +181,6 @@ h4 {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 10rem;
 }
 
 
@@ -191,6 +194,7 @@ h4 {
 
 .project-section h2 {
   margin-bottom: 5rem;
+  padding-top: 10rem;
 }
 
 .container-projects {
@@ -265,7 +269,6 @@ h4 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 10rem;
 }
 
 .reviews h3 {
@@ -484,4 +487,20 @@ footer {
   flex-direction: column;
   gap: 3.75rem;
   justify-content: space-between;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 620px) {
+
+  .container-projects {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container-projects article {
+    margin-bottom: 20px; /* Add some spacing between stacked articles */
+  }
+
 }
