@@ -22,12 +22,23 @@
   <header class="header-container">
     <nav class="navbar">
       <img src="assets/logos/circle.svg" alt="">
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#services">Services</a></li>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="./index.html" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" class="nav-link">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a href="#services" class="nav-link">Services</a>
+        </li>
       </ul>
-      <a href="./pages/contact-us.html"class="button-contact">Contact Us</a>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+      <a href="./pages/contact-us.html"class="button-contact button-contact-navbar">Contact Us</a>
     </nav>
   </header>
 
@@ -161,17 +172,17 @@
 
 
   <!-- Services Section -->
-  <!-- <section class="CTA-section">
+  <section class="CTA-section">
     <h3>Do you have any questions?</h3>
     <p>Let us help you!</p>
-    <div>
+    <div class="email-button">
       <label for="email"></label>
       <input type="email" id="email" name="email" placeholder="Enter your email:">
       <button class="button-contact">Subscribe</button>
     </div>
-  </section> -->
+  </section> 
 
-  <!-- <footer>
+   <footer>
     <section id="company-info">
       <img src="./assets/logos/circle.svg" alt="Circle logo">
       <p>2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
@@ -189,9 +200,9 @@
         <a href="">Projects</a><a href="">Privacy Policy</a>
       </div>
     </section>
-  </footer> -->
+  </footer> 
 
-
+  <script src="./js/hamburger.js"></script>
 </body>
 
 </html>

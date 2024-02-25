@@ -64,8 +64,6 @@ h4 {
   background-color: var(--neutral-light);
 }
 
-
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -73,6 +71,32 @@ h4 {
   padding-left: 100px;
   padding-right: 100px;
   flex: 1;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.nav-menu {
+  width: 100%;
+  text-align: center;
+  /* transition: 0.3s; */
+}
+
+.nav-item {
+  margin: 16px 0;
 }
 
 .navbar ul {
@@ -106,9 +130,7 @@ h4 {
 .button-contact {
   padding: 10px 20px;
   background-color: var(--primary-default);
-  /* Example button color */
   color: #fff;
-  /* Example text color */
   border: none;
   cursor: pointer;
   text-decoration: none;
@@ -489,6 +511,12 @@ footer {
 }
 
 
+
+
+
+
+
+
 /* RESPONSIVE */
 
 @media (max-width: 700px) {
@@ -521,6 +549,7 @@ footer {
     left: 0;
     right: 0;
     padding: 0;
+    height: 60px;
   }
 
   .navbar {
@@ -532,12 +561,49 @@ footer {
     flex: 1;
   }
 
-  .button-contact {
+  .navbar .nav-menu {
+    opacity: 0;
+    height: 0;
+    /* transition: height 2s linear;   */
+  }
+
+  .navbar .nav-menu.active {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    right: 0;
+    background-color: var(--neutral-light);
+    padding: 0;
+    width: 100vw;
+    height: 153px;
+    opacity: 1;
+    box-shadow: 0 30px 20px rgba(2, 35, 78, 0.2);
+
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--primary-default);
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .button-contact-navbar {
     display: none;
   }
 
   .hero {
     width: 100vw;
+    margin-top: 130px;
     margin-bottom: 3rem;
   }
 
@@ -570,10 +636,11 @@ footer {
 
   .client-section {
     width: 100vw;
+    margin-top: 5rem;
   }
 
   .client-section img {
-    width: 10%;
+    width: 4rem;
     display: flex;
 
   }
@@ -644,10 +711,59 @@ footer {
 
   .CTA-section {
     width: 100vw;
+    height: 300px;
+  }
+
+  .container-project {
+    width: 80%;
+  }
+
+  #email {
+    border: none;
+    width: 150px;
+    margin-right: 1rem;
+    background: url(assets/newsletter/icon/mail.svg) no-repeat scroll center left 1.875rem;
+    background-color: #FFFFFF;
+    border: 0;
+    margin-top: 0;
+  }
+
+  .email-button {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .project-section h2 {
+    margin-bottom: 3rem;
+    padding-top: 3rem;
   }
 
   .footer {
     width: 100vw;
     padding: 0;
+  }
+
+  footer {
+    margin-top: 6rem;
+    height: auto;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+
+  #footer-links {
+    display: none;
+  }
+
+  .company-info {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .company-info p {
+    width: 100%;
+    font-size: 1rem;
   }
 }
