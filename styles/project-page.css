@@ -32,3 +32,28 @@
     position: relative;
     top: -444px;
 }
+
+@media (max-width: 700px) {
+
+    .button-contact-navbar{
+        display: none;
+    }
+    .hero_text h1{
+        text-align: center;
+    }
+    
+    .hero-p {
+        margin: 1rem;
+    }
+
+    .hero_text p {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+
+    .hero-p {
+        display: flex;
+        flex-direction: column;
+        line-height: 0;
+    }
+}

@@ -447,6 +447,7 @@ h4 {
 }
 
 .button-contact {
+  font-size: 1rem;
   padding: 10px 20px;
   background-color: var(--primary-default);
   color: #fff;
@@ -713,6 +714,12 @@ footer {
     width: 100vw;
     height: 300px;
   }
+
+  .CTA-section button {
+    width: auto;
+    height: 80px;
+    font-size: 1.062rem;
+}
 
   .container-project {
     width: 80%;
