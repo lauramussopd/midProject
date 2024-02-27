@@ -103,12 +103,14 @@ h4 {
   list-style: none;
   display: flex;
   justify-content: center;
-  /* Aligns the list items to the center */
 }
 
 .navbar ul li {
   margin-right: 20px;
-  /* Add spacing between list items */
+}
+
+.navbar ul li:last-of-type{
+  display: none;
 }
 
 .navbar .logo {
@@ -134,6 +136,7 @@ h4 {
   border: none;
   cursor: pointer;
   text-decoration: none;
+  min-width: 80px;
 }
 
 /*Hero Section*/
@@ -565,6 +568,7 @@ footer {
   .navbar .nav-menu {
     opacity: 0;
     height: 0;
+    width: 10px;
     /* transition: height 2s linear;   */
   }
 
@@ -578,17 +582,20 @@ footer {
     background-color: var(--neutral-light);
     padding: 0;
     width: 100vw;
-    height: 153px;
+    height: 210px;
     opacity: 1;
     box-shadow: 0 30px 20px rgba(2, 35, 78, 0.2);
+  }
 
+  .navbar ul li:last-of-type{
+    display: list-item;
   }
 
   .bar {
     display: block;
     width: 25px;
     height: 3px;
-    margin: 5px auto;
+    margin: 6px auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     background-color: var(--primary-default);
