@@ -44,8 +44,8 @@ The project file structure is organized as follows:
 To utilize and operate the Circle Digital Design and Development Studio website on your local system, adhere to these guidelines:
 
 1. Duplicate the repository onto your local device.
-2. Launch the index.html file using a web browser to access the homepage.
-3. Explore additional pages like contact.html as required.
+2. Launch the `index.html` file using a web browser to access the homepage.
+3. Explore additional pages like `contact-us.html` as required.
 
 ### Live Preview 
 
