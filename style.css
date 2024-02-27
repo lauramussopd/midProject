@@ -10,6 +10,7 @@ body {
   padding-left: 100px;
   padding-right: 100px;
   max-width: 1440px;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -56,21 +57,26 @@ h4 {
   height: 10rem;
   position: fixed;
   top: 0;
-  right: 100px;
-  left: 100px;
-  padding-left: 100px;
-  padding-right: 100px;
+  /* right: 100px; */
+  /* left: 100px; */
+  /* max-width: 1478px; */
+  /* margin: 0 auto; */
+  width: 100%;
   z-index: 100;
   background-color: var(--neutral-light);
+  margin-left: -30px;
+  padding-left: 30px;
+  margin-right: 30px;
+  padding-right: -30px;
 }
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 100px;
-  padding-right: 100px;
   flex: 1;
+  max-width: 1440px;
+  width: 100%;
 }
 
 .hamburger {
@@ -237,11 +243,11 @@ h4 {
   background-color: #fff;
   box-shadow: 0 10px 20px rgba(2, 35, 78, 0.2);
   opacity: 1; /* Initial opacity */
-  transition: opacity 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .container-projects article:hover {
-  opacity: 0.7;
+  transform: scale(1.1);
 }
 
 .project-image {
@@ -560,6 +566,7 @@ footer {
     right: 0;
     padding: 0;
     height: 60px;
+    width: 100%;
   }
 
   .navbar {
@@ -687,7 +694,7 @@ footer {
 
   .container-projects article {
     min-width: 220px;
-    box-shadow: 0 1px 10px rgba(2, 35, 78, 0.2);
+    box-shadow: none;
   }
 
   .container-projects p {

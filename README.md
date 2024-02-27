@@ -54,7 +54,7 @@ You can see this website live at https://ironhack-mid-project-laura-musso.netlif
 ###  Key Features 
 
 - Responsiveness:
-    - Optimized for desktops at 1440px and mobile devices below 468px.
+    - Optimized for desktops at 1440px and mobile devices below 700px.
     - Dynamic Content Display:
 - Projects showcased on the index.html page are retrieved dynamically from Ironhack's repository.
 - Client-Side Form Validation:
