@@ -11,7 +11,6 @@ This repository hosts the source code for the Circle website along with its rela
 - [Live Preview](#live-preview)
 - [Key Features](#key-features)
 - [Contribution](#contribution)
-- [Guidelines](#guidelines)
 - [Licensing](#licensing)
 
 ###  Overview 
@@ -70,11 +69,6 @@ You can see this website live at https://ironhack-mid-project-laura-musso.netlif
 
 If you possess any recommendations, bug notifications, or feature proposals, do not hesitate to initiate an issue or propose a pull request.
 
-###  Guidelines 
-
 ###  Licensing
 
-###  Guidelines 
-
-###  Licensing
-
+This project is licensed under the [MIT License](LICENSE).
