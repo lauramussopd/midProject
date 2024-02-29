@@ -85,3 +85,21 @@ textarea::placeholder {
         padding-left: 0.25rem;
     }
 }
+
+@media only screen and (min-width: 700px) and (max-width: 1023px) {
+
+    main {
+        margin-top: 0.5rem;
+    }
+
+    .half-width-fields {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    #form-section {
+        padding: 0 2rem;
+    }
+}
