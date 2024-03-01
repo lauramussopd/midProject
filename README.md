@@ -49,7 +49,7 @@ To utilize and operate the Circle Digital Design and Development Studio website 
 
 ### Live Preview 
 
-You can see this website live at https://ironhack-mid-project-laura-musso.netlify.app. The website is deployed on Netlify.
+You can see this website live at [https://ironhack-mid-project-laura-musso.netlify.app](https://main--ironhacklauramidproject.netlify.app/). The website is deployed on Netlify.
 
 ###  Key Features 
 
